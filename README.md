@@ -1,152 +1,109 @@
-"# flight-management-app" 
 # ✈️ Flight Management App
-<img width="1920" height="1080" alt="Screenshot (332)" src="https://github.com/user-attachments/assets/a10a8a70-e4b1-45cc-8273-80c076daa176" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/08724f2d-870a-484c-908e-350de4ea0db7" />
 
-A modern Flight Booking & Management Progressive Web App (PWA) built with:
+A modern and responsive Flight Management System built using **Next.js 16**, **TypeScript**, **Tailwind CSS**, and **Supabase**.
 
-- Next.js 16
-- TypeScript
-- Tailwind CSS
-- Supabase
-- Zustand
-- React Hook Form
-- Zod
-- PWA Support
+This project allows users to:
+- Search flights
+- View bookings
+- Manage reservations
+- Access authentication pages
+- Experience a premium modern UI
 
 ---
 
-# 🚀 Features
+# 🚀 Live Demo
 
-## ✅ Authentication
-- Login with Supabase Auth
-- Secure session handling
-- Protected routes
+🔗 https://flight-management-app.onrender.com
 
-## ✅ Flight Search
-- Search flights by:
-  - Origin
-  - Destination
-  - Date
-  - Passenger count
+---
 
-## ✅ Booking System
-- Book flights
-- View booking summary
-- Manage reservations
+# 📂 GitHub Repository
 
-## ✅ Seat Selection
-- Interactive seat map
-- Live seat status
-- Real-time seat updates
+🔗 https://github.com/Git-soumik1802/flight-management-app
 
-## ✅ My Bookings
-- View all bookings
-- Cancel booking
-- Reschedule booking
+---
 
-## ✅ Progressive Web App (PWA)
-- Installable app
-- Offline support
-- Fast loading
+# 🛠️ Tech Stack
 
-## ✅ Modern UI
-- Fully responsive
-- Dark premium theme
+## Frontend
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+
+## UI & Styling
+- Lucide React Icons
+- Glassmorphism UI
+- Responsive Design
+
+## Backend / Database
+- Supabase
+
+## Deployment
+- Render
+
+---
+
+# ✨ Features
+
+## 🔍 Flight Search
+- Search available flights
+- Select origin and destination
+- Choose travel date
+- Passenger selection
+
+## 🔐 Authentication
+- Login UI
+- Secure authentication structure
+
+## 📑 Booking Management
+- My Bookings page
+- Booking confirmation page
+
+## 📱 Responsive Design
 - Mobile friendly
+- Tablet optimized
+- Desktop optimized
+
+## 🎨 Modern UI
+- Dark premium theme
+- Smooth gradients
+- Glassmorphism cards
+- Professional alignment
 
 ---
 
 # 📁 Project Structure
 
 ```bash
-src/
+flight-management-app/
 │
-├── actions/
-│   ├── booking-actions.ts
-│   └── flight-actions.ts
-│
-├── app/
-│   ├── auth/
+├── src/
+│   ├── app/
+│   │   ├── auth/
+│   │   ├── booking/
+│   │   ├── confirmation/
+│   │   ├── my-bookings/
+│   │   ├── offline/
+│   │   ├── search/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
 │   │   └── page.tsx
 │   │
-│   ├── booking/
-│   │   └── page.tsx
+│   ├── components/
 │   │
-│   ├── confirmation/
-│   │   └── page.tsx
+│   ├── lib/
+│   │   └── supabase/
 │   │
-│   ├── my-bookings/
-│   │   └── page.tsx
-│   │
-│   ├── offline/
-│   │   └── page.tsx
-│   │
-│   ├── search/
-│   │   └── page.tsx
-│   │
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
+│   └── stores/
 │
-├── components/
-│   ├── booking/
-│   │   ├── booking-form.tsx
-│   │   └── booking-summary.tsx
-│   │
-│   ├── flight/
-│   │   ├── flight-card.tsx
-│   │   └── flight-search-form.tsx
-│   │
-│   ├── seatmap/
-│   │   ├── seat-item.tsx
-│   │   └── seat-map.tsx
-│   │
-│   ├── shared/
-│   │   ├── footer.tsx
-│   │   ├── header.tsx
-│   │   └── loader.tsx
-│   │
-│   └── ui/
-│       ├── button.tsx
-│       ├── input.tsx
-│       └── modal.tsx
-│
-├── constants/
-│   ├── routes.ts
-│   └── seat-types.ts
-│
-├── hooks/
-│   ├── use-auth.ts
-│   └── use-realtime-seats.ts
-│
-├── lib/
-│   ├── supabase/
-│   │   ├── client.ts
-│   │   └── server.ts
-│   │
-│   ├── utils/
-│   │   ├── cn.ts
-│   │   └── generate-pnr.ts
-│   │
-│   └── validations/
-│       ├── booking-schema.ts
-│       └── search-schema.ts
-│
-├── stores/
-│   ├── flight-store.ts
-│   └── user-store.ts
-│
-├── types/
-│   ├── booking.ts
-│   ├── flight.ts
-│   ├── seat.ts
-│   └── user.ts
-│
-└── supabase/
-    ├── migrations/
-    │   └── 001_initial_schema.sql
-    │
-    └── seed.sql
+├── public/
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+├── next.config.js
+└── README.md
 ```
 
 ---
@@ -156,12 +113,12 @@ src/
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Git-soumik1802/flight-management-app.git
 ```
 
 ---
 
-## 2️⃣ Go To Project Folder
+## 2️⃣ Open Project
 
 ```bash
 cd flight-management-app
@@ -177,241 +134,128 @@ npm install
 
 ---
 
-# 📦 Required Packages
-
-```bash
-npm install @supabase/supabase-js @supabase/ssr zustand next-pwa react-hook-form zod @hookform/resolvers lucide-react clsx tailwind-merge sonner
-```
-
----
-
-# 🔐 Environment Variables
-
-Create:
-
-```bash
-.env.local
-```
-
-Add:
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
-NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
-```
-
----
-
-# 🛠 Supabase Setup
-
-## 1️⃣ Create Supabase Project
-
-Open:
-
-https://supabase.com/dashboard
-
-Create new project.
-
----
-
-## 2️⃣ Get API Keys
-
-Go to:
-
-```txt
-Project Settings → API
-```
-
-Copy:
-
-- Project URL
-- anon public key
-
-Paste inside:
-
-```env
-.env.local
-```
-
----
-
-## 3️⃣ Create Authentication User
-
-Go to:
-
-```txt
-Authentication → Users → Add User
-```
-
-Create:
-
-```txt
-Email: demo@gmail.com
-Password: 123456
-```
-
----
-
-## 4️⃣ Run Database Migration
-
-Open SQL Editor in Supabase.
-
-Run:
-
-```sql
-supabase/migrations/001_initial_schema.sql
-```
-
----
-
-## 5️⃣ Seed Database
-
-Run:
-
-```sql
-supabase/seed.sql
-```
-
----
-
-# ▶️ Run Project
-
-## Development Mode
+## 4️⃣ Run Development Server
 
 ```bash
 npm run dev
 ```
 
----
+Open:
 
-# 🌐 Application Routes
-
-| Route | Description |
-|------|------|
-| `/` | Home Page |
-| `/auth` | Login Page |
-| `/search` | Search Flights |
-| `/booking` | Booking Page |
-| `/confirmation` | Booking Confirmation |
-| `/my-bookings` | Manage Bookings |
-| `/offline` | Offline PWA Page |
-
----
-
-# 🧠 State Management
-
-Using:
-
-```txt
-Zustand
-```
-
-Stores:
-
-- flight-store.ts
-- user-store.ts
-
----
-
-# 📋 Form Validation
-
-Using:
-
-- React Hook Form
-- Zod
-
-Validation files:
-
-```txt
-lib/validations/
+```bash
+http://localhost:3000
 ```
 
 ---
 
-# 🎨 UI Stack
+# 🏗️ Build For Production
 
-- Tailwind CSS
-- Lucide Icons
-- Responsive Design
-- Modern Dark Theme
+```bash
+npm run build
+```
 
----
+Start production server:
 
-# 📱 PWA Support
-
-Features:
-
-- Install app on mobile
-- Offline support
-- Service worker
-- Cached pages
+```bash
+npm start
+```
 
 ---
 
-# 🔥 Main Technologies
+# 🌐 Deployment
 
-| Technology | Usage |
-|---|---|
-| Next.js | Frontend Framework |
-| TypeScript | Type Safety |
-| Supabase | Backend & Auth |
-| Zustand | State Management |
-| Tailwind CSS | Styling |
-| Zod | Validation |
-| React Hook Form | Forms |
-| next-pwa | PWA Support |
+This project is deployed using **Render**.
+
+## Render Deployment Steps
+
+1. Push code to GitHub
+2. Connect GitHub repository to Render
+3. Add environment variables
+4. Deploy as Web Service
 
 ---
 
-# 🛡️ Authentication Flow
+# 🔑 Environment Variables
 
-1. User logs in
-2. Supabase verifies credentials
-3. Session stored securely
-4. Redirect to My Bookings page
+Create `.env.local`
 
----
-
-# 🧩 Future Improvements
-
-- Payment Gateway
-- Flight API Integration
-- Real-time Notifications
-- Admin Dashboard
-- E-ticket PDF Download
-- QR Boarding Pass
-- Email Notifications
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
 ---
 
-# 👨‍💻 Author
+# 📦 Dependencies
+
+## Main Dependencies
+
+```json
+next
+react
+react-dom
+tailwindcss
+lucide-react
+zustand
+clsx
+tailwind-merge
+@supabase/ssr
+@supabase/supabase-js
+```
+
+---
+
+# 🎯 Future Improvements
+
+- Real-time flight API integration
+- Payment gateway integration
+- Seat selection system
+- Ticket download PDF
+- Admin dashboard
+- Flight tracking
+
+---
+
+# 👨‍💻 Developer
 
 ## Soumik Nandi
 
+- B.Tech Information Technology
 - MERN Stack Developer
-- Next.js Developer
-- TypeScript Enthusiast
+- Frontend & Full Stack Enthusiast
 
-GitHub:
+### 🔗 LinkedIn
+https://www.linkedin.com/in/soumik-nandi-b48a0922/
 
-```txt
+### 🔗 GitHub
 https://github.com/Git-soumik1802
-```
 
-LinkedIn:
+---
 
-```txt
-https://linkedin.com/in/soumik-nandi-b48a0922
-```
+# 📸 Screenshots
+
+## Home Page
+- Premium hero section
+- Responsive search panel
+- Feature cards
+- Statistics section
+
+## Authentication Page
+- Modern login UI
+- Responsive form design
+
+## Booking Pages
+- Booking management
+- Confirmation interface
 
 ---
 
 # 📄 License
 
-This project is for educational and internship assignment purposes.
+This project is developed for educational and portfolio purposes.
 
 ---
 
-# ⭐ If You Like This Project
+# ⭐ Support
 
-Give it a star on GitHub ⭐
+If you like this project, give it a ⭐ on GitHub.
